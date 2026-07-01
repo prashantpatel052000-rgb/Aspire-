@@ -1,63 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UdaanRise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            background-color:#E6F7FF;
-            text-align:center;
-            font-family:Arial,sans-serif;
-            margin:0;
-            padding:40px;
-        }
+<title>UdaanRise</title>
 
-        h1{
-            color:#0B5ED7;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        p{
-            color:#333333;
-            font-size:20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-        img{
-            width:220px;
-            border-radius:15px;
-            margin:20px 0;
-        }
+<style>
 
-        button{
-            background:#0B5ED7;
-            color:white;
-            padding:12px 20px;
-            border:none;
-            border-radius:8px;
-            font-size:18px;
-            cursor:pointer;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        button:hover{
-            background:#0848a6;
-        }
-    </style>
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#f8fbff,#edf5ff,#f6fbff);
+    min-height:100svh;
+    overflow-x:hidden;
+    position:relative;
+    padding:40px 0;
+}
+
+/* Background Circles */
+
+.circle1{
+    position:absolute;
+    width:min(65vw,520px);
+    aspect-ratio:1;
+    border-radius:50%;
+    border:3px solid rgba(255,255,255,.6);
+    top:calc(min(65vw,520px)/-2);
+    left:calc(min(65vw,520px)/-2);
+    z-index:-5;
+}
+
+.circle1::after{
+    content:"";
+    position:absolute;
+    inset:30px;
+    border-radius:50%;
+    border:3px solid rgba(255,255,255,.35);
+}
+
+.circle2{
+    position:absolute;
+    width:min(80vw,620px);
+    aspect-ratio:1;
+    border-radius:50%;
+    border:3px solid rgba(120,170,255,.18);
+    bottom:calc(min(80vw,620px)/-2);
+    right:calc(min(80vw,620px)/-2);
+    z-index:-5;
+}
+
+.circle2::after{
+    content:"";
+    position:absolute;
+    inset:35px;
+    border-radius:50%;
+    border:3px solid rgba(120,170,255,.12);
+}
+
+/* Dotted Decoration */
+
+.dots{
+    position:absolute;
+    width:110px;
+    height:110px;
+
+    background-image:radial-gradient(#d6e5ff 2px,transparent 2px);
+    background-size:18px 18px;
+    opacity:.9;
+    z-index:-5;
+}
+
+.top-right{
+    top:130px;
+    right:45px;
+}
+
+.bottom-left{
+    bottom:90px;
+    left:45px;
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    max-width:600px;
+    margin:0 auto;
+    padding:30px 20px;
+    text-align:center;
+}
+
+/* Welcome */
+
+.welcome{
+    color:#0B5ED7;
+    font-size:clamp(14px,2vw,18px);
+    letter-spacing:.4em;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+/* Logo */
+
+.logo{
+    font-size:clamp(42px,12vw,72px);
+    font-weight:900;
+
+    background:linear-gradient(90deg,#00195f,#1976ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:28px;
+}
+
+/* Image */
+
+img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+    margin-bottom:35px;
+}
+
+/* Tagline */
+
+.tagline{
+    font-size:clamp(30px,8vw,52px);
+    font-weight:900;
+    font-style:italic;
+    color:#082d78;
+    line-height:1.05;
+}
+
+/* Line */
+
+.line{
+    width:clamp(60px,18vw,90px);
+    height:clamp(3px,0.8vw,5px);
+    background:#1d74ff;
+    border-radius:999px;
+    margin:clamp(16px,3vw,22px) auto clamp(24px,5vw,32px);
+}
+
+/* Description */
+
+.description{
+    font-size:clamp(18px,5vw,24px);
+    color:#444;
+    margin-bottom:35px;
+}
+
+/* Button */
+
+button{
+
+    background:linear-gradient(90deg,#0058ff,#2b7cff);
+
+    color:white;
+
+    font-size:clamp(18px,5vw,24px);
+
+    font-weight:700;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 30px rgba(0,90,255,.35);
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <h1> Welcome to UdaanRise</h1>
+<div class="circle1"></div>
+<div class="circle2"></div>
 
-    <img src="image.jpg" alt="UdaanRise Logo">
+<div class="dots top-right"></div>
+<div class="dots bottom-left"></div>
 
-    <p><b>Learn. Grow. Rise.</b></p>
+<div class="container">
 
-    <p>Empowering minds through knowledge.</p>
+<div class="welcome">WELCOME TO</div>
+
+<div class="logo">UdaanRise</div>
+
+<img src="image.jpg" alt="UdaanRise">
+
+<div class="tagline">
+LEARN. GROW. RISE.
+</div>
+
+<div class="line"></div>
+
+<div class="description">
+Empowering minds through knowledge.
+</div>
 
 <a href="learn.html">
-    <button>Start Learning</button>
+<button>Start Learning →</button>
 </a>
+
+</div>
 
 </body>
 </html>
