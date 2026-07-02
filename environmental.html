@@ -1,55 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Politics - UdaanRise</title>
 
-    <style>
-        body{
-            background-color:#E6F7FF;
-            text-align:center;
-            font-family:Arial,sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1{
-            color:#0B5ED7;
-        }
+<title>Environmental Studies | UdaanRise</title>
 
-        button{
-            background:#0B5ED7;
-            color:white;
-            padding:12px 20px;
-            border:none;
-            border-radius:8px;
-            font-size:18px;
-            margin:12px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        a{
-            text-decoration:none;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f8fbff,#edf5ff,#f6fbff);
+min-height:100svh;
+overflow-x:hidden;
+position:relative;
+padding:50px 20px;
+}
+
+/* Background */
+
+.circle1{
+position:absolute;
+width:520px;
+height:520px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.55);
+top:-260px;
+left:-260px;
+z-index:-2;
+}
+
+.circle1::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.35);
+}
+
+.circle2{
+position:absolute;
+width:620px;
+height:620px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.15);
+bottom:-320px;
+right:-320px;
+z-index:-2;
+}
+
+.circle2::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.10);
+}
+
+.dots{
+position:absolute;
+width:90px;
+height:90px;
+background-image:radial-gradient(#d5e4ff 2px,transparent 2px);
+background-size:16px 16px;
+opacity:.8;
+z-index:-2;
+}
+
+.top-right{
+top:100px;
+right:30px;
+}
+
+.bottom-left{
+bottom:80px;
+left:30px;
+}
+
+/* Main Content */
+
+.container{
+width:100%;
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+.heading{
+font-size:clamp(40px,8vw,60px);
+font-weight:900;
+background:linear-gradient(90deg,#00195f,#1976ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:12px;
+}
+
+.subheading{
+color:#4f6b8a;
+font-size:18px;
+margin-bottom:40px;
+}
+
+.subject{
+display:block;
+width:100%;
+margin:18px 0;
+text-decoration:none;
+}
+
+.subject button{
+width:100%;
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 20px;
+border:none;
+border-radius:18px;
+font-size:20px;
+font-weight:600;
+line-height:1.3;
+text-align:center;
+color:white;
+background:linear-gradient(90deg,#0058ff,#2b7cff);
+box-shadow:0 15px 30px rgba(0,90,255,.25);
+cursor:pointer;
+transition:.3s;
+}
+
+.subject button:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 35px rgba(0,90,255,.35);
+}
+
+</style>
 
 </head>
 
 <body>
 
-<h1> Environmental Studies</h1>
+<div class="circle1"></div>
+<div class="circle2"></div>
 
-<button>Ecosystems & Biodiversity</button><br>
+<div class="dots top-right"></div>
+<div class="dots bottom-left"></div>
 
-<button>Natural Resources</button><br>
+<div class="container">
 
-<button>Pollution & Waste Management</button><br>
+<div class="heading">
+Environmental Studies
+</div>
 
-<button>Climate Change</button><br>
+<div class="subheading">
+Understand our environment and learn how to protect our planet for future generations.
+</div>
 
-<button>Conservation & Wildlife</button><br>
+<a class="subject" href="ecosystems.html">
+<button> Ecosystems & Biodiversity</button>
+</a>
 
-<button>Sustainable Development</button><br>
+<a class="subject" href="natural-resources.html">
+<button> Natural Resources</button>
+</a>
 
-<button>Environmental Laws & Policies</button><br>
+<a class="subject" href="pollution.html">
+<button> Pollution & Waste Management</button>
+</a>
 
+<a class="subject" href="climate-change.html">
+<button> Climate Change</button>
+</a>
+
+<a class="subject" href="conservation.html">
+<button> Conservation & Wildlife</button>
+</a>
+
+<a class="subject" href="sustainable-development.html">
+<button> Sustainable Development</button>
+</a>
+
+<a class="subject" href="environmental-laws.html">
+<button> Environmental Laws & Policies</button>
+</a>
+
+</div>
 
 </body>
 
