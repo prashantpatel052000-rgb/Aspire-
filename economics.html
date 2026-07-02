@@ -1,58 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Politics - UdaanRise</title>
 
-    <style>
-        body{
-            background-color:#E6F7FF;
-            text-align:center;
-            font-family:Arial,sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1{
-            color:#0B5ED7;
-        }
+<title>Business & Economics | UdaanRise</title>
 
-        button{
-            background:#0B5ED7;
-            color:white;
-            padding:12px 20px;
-            border:none;
-            border-radius:8px;
-            font-size:18px;
-            margin:12px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        a{
-            text-decoration:none;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f8fbff,#edf5ff,#f6fbff);
+min-height:100svh;
+overflow-x:hidden;
+position:relative;
+padding:50px 20px;
+}
+
+.circle1{
+position:absolute;
+width:520px;
+height:520px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.55);
+top:-260px;
+left:-260px;
+z-index:-2;
+}
+
+.circle1::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.35);
+}
+
+.circle2{
+position:absolute;
+width:620px;
+height:620px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.15);
+bottom:-320px;
+right:-320px;
+z-index:-2;
+}
+
+.circle2::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.10);
+}
+
+.dots{
+position:absolute;
+width:90px;
+height:90px;
+background-image:radial-gradient(#d5e4ff 2px,transparent 2px);
+background-size:16px 16px;
+opacity:.8;
+z-index:-2;
+}
+
+.top-right{
+top:100px;
+right:30px;
+}
+
+.bottom-left{
+bottom:80px;
+left:30px;
+}
+
+.container{
+width:100%;
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+.heading{
+font-size:clamp(40px,8vw,60px);
+font-weight:900;
+background:linear-gradient(90deg,#00195f,#1976ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:12px;
+}
+
+.subheading{
+color:#4f6b8a;
+font-size:18px;
+margin-bottom:40px;
+}
+
+.subject{
+display:block;
+width:100%;
+margin:18px 0;
+text-decoration:none;
+}
+
+.subject button{
+width:100%;
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 20px;
+border:none;
+border-radius:18px;
+font-size:20px;
+font-weight:600;
+line-height:1.3;
+text-align:center;
+color:white;
+background:linear-gradient(90deg,#0058ff,#2b7cff);
+box-shadow:0 15px 30px rgba(0,90,255,.25);
+cursor:pointer;
+transition:.3s;
+}
+
+.subject button:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 35px rgba(0,90,255,.35);
+}
+
+</style>
 
 </head>
 
 <body>
 
-<h1> Buisness & Economics</h1>
+<div class="circle1"></div>
+<div class="circle2"></div>
 
-<button>Basic Economics</button><br>
+<div class="dots top-right"></div>
+<div class="dots bottom-left"></div>
 
-<button>Markets & Trade</button><br>
+<div class="container">
 
-<button>Banking & Finance</button><br>
+<div class="heading">
+Business & Economics
+</div>
 
-<button>Indian Economy</button><br>
+<div class="subheading">
+Understand economics, finance, markets, and entrepreneurship in a simple and practical way.
+</div>
 
-<button>Business & Entrepreneurship</button><br>
+<a class="subject" href="basic-economics.html">
+<button> Basic Economics</button>
+</a>
 
-<button>Public Finance</button><br>
+<a class="subject" href="markets-trade.html">
+<button> Markets & Trade</button>
+</a>
 
-<button>Global Economy</button><br>
+<a class="subject" href="banking-finance.html">
+<button> Banking & Finance</button>
+</a>
 
-<button>Economic Current Affairs</button><br>
+<a class="subject" href="indian-economy.html">
+<button> Indian Economy</button>
+</a>
 
+<a class="subject" href="business-entrepreneurship.html">
+<button> Business & Entrepreneurship</button>
+</a>
 
+<a class="subject" href="public-finance.html">
+<button> Public Finance</button>
+</a>
+
+<a class="subject" href="global-economy.html">
+<button> Global Economy</button>
+</a>
+
+<a class="subject" href="economic-current-affairs.html">
+<button> Economic Current Affairs</button>
+</a>
+
+</div>
 
 </body>
 
