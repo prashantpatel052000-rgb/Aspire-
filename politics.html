@@ -1,60 +1,201 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Politics - UdaanRise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            background-color:#E6F7FF;
-            text-align:center;
-            font-family:Arial,sans-serif;
-        }
+<title>Politics | UdaanRise</title>
 
-        h1{
-            color:#0B5ED7;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        button{
-            background:#0B5ED7;
-            color:white;
-            padding:12px 20px;
-            border:none;
-            border-radius:8px;
-            font-size:18px;
-            margin:12px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-        a{
-            text-decoration:none;
-        }
-    </style>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f8fbff,#edf5ff,#f6fbff);
+min-height:100svh;
+overflow-x:hidden;
+position:relative;
+padding:50px 20px;
+}
+
+/* Background */
+
+.circle1{
+position:absolute;
+width:520px;
+height:520px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.55);
+top:-260px;
+left:-260px;
+z-index:-2;
+}
+
+.circle1::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,.35);
+}
+
+.circle2{
+position:absolute;
+width:620px;
+height:620px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.15);
+bottom:-320px;
+right:-320px;
+z-index:-2;
+}
+
+.circle2::after{
+content:"";
+position:absolute;
+inset:40px;
+border-radius:50%;
+border:3px solid rgba(120,170,255,.10);
+}
+
+.dots{
+position:absolute;
+width:90px;
+height:90px;
+background-image:radial-gradient(#d5e4ff 2px,transparent 2px);
+background-size:16px 16px;
+opacity:.8;
+z-index:-2;
+}
+
+.top-right{
+top:100px;
+right:30px;
+}
+
+.bottom-left{
+bottom:80px;
+left:30px;
+}
+
+/* Main Content */
+
+.container{
+max-width:500px;
+margin:auto;
+text-align:center;
+}
+
+.heading{
+font-size:clamp(40px,8vw,60px);
+font-weight:900;
+background:linear-gradient(90deg,#00195f,#1976ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:12px;
+}
+
+.subheading{
+color:#4f6b8a;
+font-size:18px;
+margin-bottom:40px;
+}
+
+.subject{
+display:block;
+text-decoration:none;
+margin:18px auto;
+width:100%;
+}
+
+.subject button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:18px;
+font-size:22px;
+font-weight:600;
+color:white;
+background:linear-gradient(90deg,#0058ff,#2b7cff);
+box-shadow:0 15px 30px rgba(0,90,255,.25);
+cursor:pointer;
+transition:.3s;
+}
+
+.subject button:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 35px rgba(0,90,255,.35);
+}
+
+</style>
 
 </head>
 
 <body>
 
-<h1> Politics</h1>
+<div class="circle1"></div>
+<div class="circle2"></div>
 
-<button>Democracy</button><br>
+<div class="dots top-right"></div>
+<div class="dots bottom-left"></div>
 
-<button>Constitution</button><br>
+<div class="container">
 
-<button>Rights & Duties</button><br>
+<div class="heading">
+Politics
+</div>
 
-<button>Government & Parliament</button><br>
+<div class="subheading">
+Explore the important topics of Politics.
+</div>
 
-<button>Judiciary</button><br>
+<a class="subject" href="democracy.html">
+<button> Democracy</button>
+</a>
 
-<button>Elections & Political Parties</button><br>
+<a class="subject" href="constitution.html">
+<button> Constitution</button>
+</a>
 
-<button>Federalism & Local Government</button><br>
+<a class="subject" href="rights.html">
+<button> Rights & Duties</button>
+</a>
 
-<button>Public Administration & Governance</button><br>
+<a class="subject" href="government.html">
+<button> Government & Parliament</button>
+</a>
 
-<button>Contemporary Politics & Current Affairs</button><br><br>
+<a class="subject" href="judiciary.html">
+<button> Judiciary</button>
+</a>
 
+<a class="subject" href="elections.html">
+<button> Elections & Political Parties</button>
+</a>
+
+<a class="subject" href="federalism.html">
+<button> Federalism & Local Government</button>
+</a>
+
+<a class="subject" href="governance.html">
+<button> Public Administration & Governance</button>
+</a>
+
+<a class="subject" href="current-affairs.html">
+<button> Contemporary Politics & Current Affairs</button>
+</a>
+
+</div>
 
 </body>
-
 </html>
